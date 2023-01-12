@@ -14,30 +14,31 @@ def zigzag(x):
             print(" *" * (x - (x-j)))
 zigzag(6)
 
-# def savas(y):
-#     fixed = y
-#     for i in range(y):
-#         print("Step ",i+1,":", end=" ") # added step number
-#         if i % 2 == 0:
-#             for j in range(y - i):
-#                 print("a l ", end="") # added end="" to prevent new line
-#             print("") # added new line
-#         else:
-#             for j in range(y - i):
-#                 print(" a l", end="") # added end="" to prevent new line
-#             print("") # added new line
-#     # Reverse the step numbers and zigzag
-#     for i in range(fixed):
-#         print("Step ",i+1,":", end=" ") # added step number
-#         if i % 2 == 0:
-#             for j in range(fixed + i):
-#                 print("* ", end="") # added end="" to prevent new line
-#             print("") # added new line
-#         else:
-#             for j in range(fixed + i):
-#                 print(" *", end="") # added end="" to prevent new line
-#             print("") # added new line
-# savas(5)
+def savas(y):
+    for i in range(y):
+        print("Step ",i+1,":", end=" ") # added step number
+        if i % 2 == 0:
+            for j in range(y - i):
+                print("+ ", end="") # added end="" to prevent new line
+            print("") # added new line
+        else:
+            for j in range(y - i):
+                print(" +", end="") # added end="" to prevent new line
+            print("") # added new line
+    # Reverse the step numbers and zigzag
+    for j in range(y):
+        z=y+1
+        print("Step ",i+1,":", end=" ") # added step number
+        t=z-(z-j)+1
+        if j % 2 == 0:
+            for k in range(t):
+                print("* ", end="") # added end="" to prevent new line
+            print("") # added new line
+        else:
+            for k in range(t):
+                print(" *", end="") # added end="" to prevent new line
+            print("") # added new line
+savas(5)
 
 # import math
 # def zigzag_pattern(rows):
