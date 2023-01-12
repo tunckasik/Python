@@ -7,13 +7,12 @@ def zigzag(x):
 
     # Af the last iteration the value of i = 5
 
-    for j in range(x):
+    for j in range(x+1):
         if j % 2 == 0:
             print("* " * (x - (x-j)))
         else:
             print(" *" * (x - (x-j)))
-    print(" *" * (x))
-zigzag(10)
+zigzag(6)
 
 # def savas(y):
 #     fixed = y
