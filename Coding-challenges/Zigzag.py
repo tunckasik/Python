@@ -5,13 +5,13 @@ def zigzag(x):
         else:
             print(" *" * (x - i))
 
-    # Af the last iteration the value of i = 5
+    # At the last iteration the value of i = 5
 
     for j in range(x+1):
         if j % 2 == 0:
-            print("* " * (x - (x-j)))
+            print("+ " * (x - (x-j)))
         else:
-            print(" *" * (x - (x-j)))
+            print(" +" * (x - (x-j)))
 zigzag(6)
 
 def savas(y):
@@ -26,11 +26,10 @@ def savas(y):
                 print(" +", end="") # added end="" to prevent new line
             print("") # added new line
     # Reverse the step numbers and zigzag
-    for j in range(y):
-        z=y+1
-        print("Step ",i+1,":", end=" ") # added step number
-        t=z-(z-j)+1
-        if j % 2 == 0:
+    for a in range(y, 0, -1):
+        print("Step ", a,":", end=" ") # added step number
+        t = y - (y-a) # to ascend the value
+        if a % 2 == 0:
             for k in range(t):
                 print("* ", end="") # added end="" to prevent new line
             print("") # added new line
@@ -38,7 +37,10 @@ def savas(y):
             for k in range(t):
                 print(" *", end="") # added end="" to prevent new line
             print("") # added new line
-savas(5)
+savas(6)
+
+# for i in range(10, 0, -1):
+#     print(i)
 
 # import math
 # def zigzag_pattern(rows):
